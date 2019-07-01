@@ -1,0 +1,65 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-01-12 11:09:34
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-06-27 16:48:45
+ * @文件说明: flex布局 样式
+ */
+@mixin flex($jc: center, $ai: center, $fd: row, $fw: wrap) {
+    display: flex;
+    flex-wrap: $fw;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
+// flex：左对齐
+@mixin flex-s($ai: center, $fd: row) {
+    @include flex(flex-start, $ai, $fd);
+}
+
+// flex：右对齐
+@mixin flex-e($ai: center, $fd: row) {
+    @include flex(flex-end, $ai, $fd);
+}
+
+// flex：居中对齐
+@mixin flex-c($ai: center, $fd: row) {
+    @include flex(center, $ai, $fd);
+}
+
+// flex：两端对齐
+@mixin flex-a($ai: center, $fd: row) {
+    @include flex(space-around, $ai, $fd);
+}
+
+// flex：每个项目两侧的间隔相等
+@mixin flex-b($ai: center, $fd: row) {
+    @include flex(space-between, $ai, $fd);
+}
+
+.flex-s {
+    @include flex-s;
+}
+.flex-s-s {
+    @include flex-s(flex-start);
+}
+.flex-e {
+    @include flex-e;
+}
+
+.flex-c {
+    @include flex-c;
+}
+.flex-b {
+    @include flex-b;
+}
+.flex-b-s {
+    @include flex-s(flex-start);
+}
+.flex-a {
+    @include flex-a;
+}
+.flex {
+    flex: 1;
+}

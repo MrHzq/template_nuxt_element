@@ -1,0 +1,72 @@
+//  行内
+.inline {
+    display: inline-block !important;
+}
+
+// 居中对齐
+.align-c {
+    text-align: center;
+}
+//左对齐
+.align-l {
+    text-align: left;
+}
+//右对齐
+.align-r {
+    text-align: right;
+}
+
+//手型
+.cursor {
+    cursor: pointer !important;
+    user-select: none;
+}
+
+// 透明度0
+.opacity0 {
+    opacity: 0;
+}
+
+// 背景颜色白色
+.bgf {
+    background-color: #fff;
+}
+
+// 背景图片相关
+@mixin bgi(
+    $url: '~@/assets/defaultAvatar.png',
+    $size: cover,
+    $p: center,
+    $r: no-repeat
+) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $p;
+    background-repeat: $r;
+}
+.bgi {
+    @include bgi;
+}
+
+// 单行超出隐藏
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellipsis {
+    @include ellipsis;
+}
+
+// 多行超出隐藏
+@mixin ellipsis2($clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: $clamp;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+}
+.ellipsis2 {
+    @include ellipsis2;
+}
