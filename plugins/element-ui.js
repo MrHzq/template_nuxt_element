@@ -1,5 +1,5 @@
-import Vue from './node_modules/vue'
-import Element from './node_modules/element-ui'
-import locale from './node_modules/element-ui/lib/locale/lang/en'
+import Vue from 'vue'
+import Element from 'element-ui'
+import '@/assets/style/element-variables.scss'
 
-Vue.use(Element, { locale })
+Vue.use(Element)

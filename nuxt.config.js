@@ -60,7 +60,11 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: ['@/plugins/element-ui'],
+    plugins: [
+        '@/plugins/element-ui',
+        // 以下为新增的
+        '@/plugins/global-components'
+    ],
     /*
      ** Nuxt.js modules
      */
