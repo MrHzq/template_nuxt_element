@@ -26,6 +26,9 @@ export default {
             {
                 src:
                     'https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js'
+            },
+            {
+                src: 'https://hm.baidu.com/hm.js?*******' // 百度统计js
             }
         ]
     },
@@ -62,8 +65,12 @@ export default {
      */
     plugins: [
         '@/plugins/element-ui',
-        // 以下为新增的
-        '@/plugins/global-components'
+        // =============以下统统为新增的=============
+        '@/plugins/global-components', // 全局Vue组件注册
+        '@/plugins/combined-inject', // 全局Vue变量
+        '@/plugins/baidu', // 百度统计
+        '@/plugins/baidu_js_push', // 百度自动推送
+        '@/plugins/360_js_push' // 360自动推送
     ],
     /*
      ** Nuxt.js modules
