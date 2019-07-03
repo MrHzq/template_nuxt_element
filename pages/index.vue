@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div>
+        <div class="flex-c">
             <logo />
             <el-button type="primary">按钮</el-button>
             {{ $store.state.user.hzq.age }}
